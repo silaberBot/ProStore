@@ -22,6 +22,9 @@ def main_menu_keyboard() -> ReplyKeyboardMarkup:
 
 def admin_main_menu() -> ReplyKeyboardMarkup:
     buttons = [
+        ["🛍 فروشگاه", "👤 پروفایل من"],
+        ["💰 کیف پول", "🔗 دعوت از دوستان"],
+        ["🎫 پشتیبانی", "📚 آموزش‌ها"],
         ["📊 داشبورد", "📦 سفارشات"],
         ["🏪 محصولات", "👥 کاربران"],
         ["💳 پرداخت‌ها", "🎟 تخفیف‌ها"],
@@ -183,7 +186,7 @@ def admin_product_actions(product_id: int) -> InlineKeyboardMarkup:
     buttons = [
         [InlineKeyboardButton("✏️ ویرایش", callback_data=f"admin:product:edit:{product_id}")],
         [InlineKeyboardButton("📦 مدیریت انبار", callback_data=f"admin:product:inventory:{product_id}")],
-        [InlineKeyboardButton("🔙 بازگشت", callback_data="admin:products")],
+        [InlineKeyboardButton("🔙 بازگشت", callback_data="admin:products_list")],
     ]
     return InlineKeyboardMarkup(buttons)
 
